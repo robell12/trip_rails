@@ -1,0 +1,16 @@
+<h1>Welcome to your trip organizer</h1>
+<hr />
+
+<% if @trips.any? %>
+	<ul>
+		<% @trips.each do |trip| %>
+			<li>
+				<%= link_to trip.title, trip_path(trip) %>
+			</li>
+		<% end %>
+	</ul>
+<% else %>
+	<h1>No trips to show</h1>
+<% end %>
+
+<%= link_to 'Add a trip here', new_trip_path %>

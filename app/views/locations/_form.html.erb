@@ -1,0 +1,9 @@
+<%= form_for [@trip, @location] do |f|%>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br />
+	<%= f.label :time %>
+	<%= f.date_field(:time) %>
+	<br />
+	<%= f.submit %>
+<% end %>
